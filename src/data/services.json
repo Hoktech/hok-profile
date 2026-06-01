@@ -1,0 +1,238 @@
+{
+  "services": [
+    {
+      "id": "erp-systems",
+      "slug": "erp-systems",
+      "icon": "database",
+      "title": {
+        "en": "ERP Systems",
+        "ar": "أنظمة ERP"
+      },
+      "description": {
+        "en": "Custom Enterprise Resource Planning solutions tailored to your business. Modules include inventory, HR, accounting, procurement, and more.",
+        "ar": "حلول تخطيط موارد المؤسسات المخصصة لأعمالك. تشمل إدارة المخزون، الموارد البشرية، المحاسبة، المشتريات والمزيد."
+      },
+      "features": {
+        "en": [
+          "Inventory Management",
+          "HR Module",
+          "Accounting & Finance",
+          "Procurement",
+          "Reports & Analytics"
+        ],
+        "ar": [
+          "إدارة المخزون",
+          "وحدة الموارد البشرية",
+          "المحاسبة والمالية",
+          "المشتريات",
+          "التقارير والتحليلات"
+        ]
+      }
+    },
+    {
+      "id": "pos-solutions",
+      "slug": "pos-solutions",
+      "icon": "monitor",
+      "title": {
+        "en": "POS Solutions",
+        "ar": "أنظمة نقاط البيع"
+      },
+      "description": {
+        "en": "Modern Point of Sale systems designed for retail, restaurants, and service businesses with real-time inventory tracking.",
+        "ar": "أنظمة نقاط بيع حديثة مصممة للتجزئة والمطاعم والخدمات مع تتبع المخزون في الوقت الفعلي."
+      },
+      "features": {
+        "en": [
+          "Multi-branch Support",
+          "Real-time Inventory",
+          "Barcode Scanning",
+          "Receipt Printing",
+          "Sales Reports"
+        ],
+        "ar": [
+          "دعم متعدد الفروع",
+          "مخزون لحظي",
+          "مسح الباركود",
+          "طباعة الفواتير",
+          "تقارير المبيعات"
+        ]
+      }
+    },
+    {
+      "id": "crm-platforms",
+      "slug": "crm-platforms",
+      "icon": "users",
+      "title": {
+        "en": "CRM Platforms",
+        "ar": "منصات CRM"
+      },
+      "description": {
+        "en": "Customer Relationship Management platforms that help you manage leads, track interactions, and boost customer retention.",
+        "ar": "منصات إدارة علاقات العملاء التي تساعدك في إدارة العملاء المحتملين وتتبع التفاعلات وتعزيز الولاء."
+      },
+      "features": {
+        "en": [
+          "Lead Management",
+          "Sales Pipeline",
+          "Customer Analytics",
+          "Email Integration",
+          "Task Automation"
+        ],
+        "ar": [
+          "إدارة العملاء المحتملين",
+          "مسار المبيعات",
+          "تحليلات العملاء",
+          "تكامل البريد",
+          "أتمتة المهام"
+        ]
+      }
+    },
+    {
+      "id": "mobile-apps",
+      "slug": "mobile-apps",
+      "icon": "smartphone",
+      "title": {
+        "en": "Mobile Applications",
+        "ar": "تطبيقات الموبايل"
+      },
+      "description": {
+        "en": "Cross-platform mobile applications built with Flutter for iOS and Android with native-like performance and beautiful UI.",
+        "ar": "تطبيقات موبايل متعددة المنصات مبنية بـ Flutter لنظامي iOS و Android بأداء وواجهة مستخدم مذهلة."
+      },
+      "features": {
+        "en": [
+          "Cross-platform (iOS & Android)",
+          "Native Performance",
+          "Beautiful UI/UX",
+          "Offline Support",
+          "Push Notifications"
+        ],
+        "ar": [
+          "متعدد المنصات (iOS و Android)",
+          "أداء أصلي",
+          "واجهة مستخدم جذابة",
+          "دعم عدم الاتصال",
+          "الإشعارات"
+        ]
+      }
+    },
+    {
+      "id": "whatsapp-api-official",
+      "slug": "whatsapp-api-official",
+      "icon": "messageCircle",
+      "title": {
+        "en": "WhatsApp API — Official",
+        "ar": "WhatsApp API — الرسمي"
+      },
+      "description": {
+        "en": "Official WhatsApp Business API integration through wpclud.site for enterprise-grade messaging, templates, and automation.",
+        "ar": "تكامل WhatsApp Business API الرسمي عبر wpclud.site للرسائل المؤسسية والقوالب والأتمتة."
+      },
+      "features": {
+        "en": [
+          "Official Meta API",
+          "Message Templates",
+          "Webhook Events",
+          "Multi-agent Support",
+          "Analytics Dashboard"
+        ],
+        "ar": [
+          "API رسمي من Meta",
+          "قوالب الرسائل",
+          "أحداث Webhook",
+          "دعم متعدد الوكلاء",
+          "لوحة التحليلات"
+        ]
+      },
+      "link": "https://wpclud.site"
+    },
+    {
+      "id": "whatsapp-api-unofficial",
+      "slug": "whatsapp-api-unofficial",
+      "icon": "send",
+      "title": {
+        "en": "WhatsApp API — WPSender",
+        "ar": "WhatsApp API — WPSender"
+      },
+      "description": {
+        "en": "Unofficial WhatsApp API service via wpsenderx.com for bulk messaging, session management, and flexible automation.",
+        "ar": "خدمة WhatsApp API غير الرسمية عبر wpsenderx.com للرسائل الجماعية وإدارة الجلسات والأتمتة المرنة."
+      },
+      "features": {
+        "en": [
+          "Bulk Messaging",
+          "Session Management",
+          "QR Auth",
+          "Media Support",
+          "REST API"
+        ],
+        "ar": [
+          "الرسائل الجماعية",
+          "إدارة الجلسات",
+          "مصادقة QR",
+          "دعم الوسائط",
+          "REST API"
+        ]
+      },
+      "link": "https://wpsenderx.com"
+    },
+    {
+      "id": "api-services",
+      "slug": "api-services",
+      "icon": "code",
+      "title": {
+        "en": "API Services & Integrations",
+        "ar": "خدمات الـ API والتكامل"
+      },
+      "description": {
+        "en": "Custom RESTful and WebSocket API development, third-party integrations, and microservices architecture.",
+        "ar": "تطوير API مخصص (REST و WebSocket)، تكامل مع الأنظمة الخارجية، وبنية الخدمات المصغرة."
+      },
+      "features": {
+        "en": [
+          "RESTful APIs",
+          "WebSocket Real-time",
+          "Payment Gateway Integration",
+          "Third-party APIs",
+          "Microservices"
+        ],
+        "ar": [
+          "واجهات RESTful",
+          "WebSocket لحظي",
+          "تكامل بوابات الدفع",
+          "واجهات خارجية",
+          "خدمات مصغرة"
+        ]
+      }
+    },
+    {
+      "id": "web-development",
+      "slug": "web-development",
+      "icon": "globe",
+      "title": {
+        "en": "Web Development",
+        "ar": "تطوير المواقع"
+      },
+      "description": {
+        "en": "Modern, responsive websites and web applications built with Next.js, React, and cutting-edge technologies.",
+        "ar": "مواقع وتطبيقات ويب حديثة ومتجاوبة مبنية بـ Next.js و React وأحدث التقنيات."
+      },
+      "features": {
+        "en": [
+          "Next.js & React",
+          "Responsive Design",
+          "SEO Optimized",
+          "Performance First",
+          "CMS Integration"
+        ],
+        "ar": [
+          "Next.js و React",
+          "تصميم متجاوب",
+          "محسن لمحركات البحث",
+          "الأداء أولاً",
+          "تكامل CMS"
+        ]
+      }
+    }
+  ]
+}

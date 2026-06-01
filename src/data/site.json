@@ -1,0 +1,44 @@
+{
+  "company": {
+    "name": { "en": "HOK", "ar": "هوك" },
+    "fullName": { "en": "HOK Technologies", "ar": "هوك للتقنيات" },
+    "tagline": {
+      "en": "Building Enterprise Solutions",
+      "ar": "نبني حلول المؤسسات"
+    },
+    "description": {
+      "en": "We are a specialized tech team building enterprise-grade ERP, POS, CRM systems, mobile applications, and API integration services.",
+      "ar": "فريق تقني متخصص في بناء أنظمة ERP و POS و CRM للمؤسسات، وتطبيقات الموبايل، وخدمات تكامل الـ API."
+    },
+    "founded": "2020",
+    "emails": [
+      { "label": "Business", "address": "hoktechb@gmail.com" },
+      { "label": "CEO", "address": "cep@hokportal.com" },
+      { "label": "Support", "address": "support@hokportal.com" }
+    ],
+    "whatsapp": "201556262660",
+    "website": "https://hokportal.com",
+    "address": {
+      "en": "",
+      "ar": ""
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/hoktech/",
+    "github": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "youtube": ""
+  },
+  "seo": {
+    "title": {
+      "en": "HOK Technologies — Enterprise Solutions & Digital Innovation",
+      "ar": "هوك للتقنيات — حلول المؤسسات والابتكار الرقمي"
+    },
+    "description": {
+      "en": "HOK Technologies builds premium ERP, POS, CRM systems, Flutter mobile apps, and WhatsApp API services. Led by Eng. Mahmoud Salah.",
+      "ar": "هوك للتقنيات تبني أنظمة ERP و POS و CRM وتطبيقات Flutter وخدمات WhatsApp API. بقيادة م. محمود صلاح."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "partners": [
+    {
+      "id": "wpcloud",
+      "name": "WPCloud",
+      "logo": "",
+      "website": "https://wpclud.site"
+    },
+    {
+      "id": "wpsender",
+      "name": "WPSender",
+      "logo": "",
+      "website": "https://wpsenderx.com"
+    }
+  ]
+}

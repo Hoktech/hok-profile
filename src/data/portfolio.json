@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "id": "hoktech-erp",
+      "slug": "hoktech-erp",
+      "title": {
+        "en": "HOK ERP System",
+        "ar": "نظام HOK ERP"
+      },
+      "category": {
+        "en": "Enterprise Software",
+        "ar": "برمجيات مؤسسية"
+      },
+      "description": {
+        "en": "A comprehensive Enterprise Resource Planning system built with .NET 8 and React, featuring modular architecture with HR, inventory, accounting, and procurement modules.",
+        "ar": "نظام تخطيط موارد مؤسسات شامل مبني بـ .NET 8 و React، يتميز ببنية وحدات تشمل الموارد البشرية والمخزون والمحاسبة والمشتريات."
+      },
+      "techStack": [
+        ".NET 8",
+        "React",
+        "SQL Server",
+        "Tailwind CSS",
+        "REST API"
+      ],
+      "images": [
+        "/images/portfolio/erp-1.png"
+      ],
+      "featured": true,
+      "year": "2024",
+      "client": {
+        "en": "Internal Product",
+        "ar": "منتج داخلي"
+      }
+    },
+    {
+      "id": "wpcloud-whatsapp",
+      "slug": "wpcloud-whatsapp",
+      "title": {
+        "en": "WPCloud — WhatsApp Business API",
+        "ar": "WPCloud — واجهة WhatsApp للأعمال"
+      },
+      "category": {
+        "en": "API Platform",
+        "ar": "منصة API"
+      },
+      "description": {
+        "en": "Official WhatsApp Business API platform providing enterprise messaging, template management, webhook delivery, and multi-session support.",
+        "ar": "منصة WhatsApp Business API الرسمية توفر رسائل المؤسسات وإدارة القوالب وتوصيل Webhook ودعم الجلسات المتعددة."
+      },
+      "techStack": [
+        "Node.js",
+        "WhatsApp Business API",
+        "WebSocket",
+        "React",
+        "MongoDB"
+      ],
+      "images": [
+        "/images/portfolio/wpcloud-1.png"
+      ],
+      "featured": true,
+      "year": "2024",
+      "client": {
+        "en": "wpclud.site",
+        "ar": "wpclud.site"
+      },
+      "link": "https://wpclud.site"
+    },
+    {
+      "id": "wpsender",
+      "slug": "wpsender",
+      "title": {
+        "en": "WPSender — WhatsApp Automation",
+        "ar": "WPSender — أتمتة WhatsApp"
+      },
+      "category": {
+        "en": "SaaS Platform",
+        "ar": "منصة SaaS"
+      },
+      "description": {
+        "en": "WhatsApp automation platform for bulk messaging, session management, and real-time WebSocket communication with comprehensive REST API.",
+        "ar": "منصة أتمتة WhatsApp للرسائل الجماعية وإدارة الجلسات والتواصل اللحظي عبر WebSocket مع REST API شامل."
+      },
+      "techStack": [
+        "Node.js",
+        "Puppeteer",
+        "WebSocket",
+        "React",
+        "Redis"
+      ],
+      "images": [
+        "/images/portfolio/wpsender-1.png"
+      ],
+      "featured": true,
+      "year": "2023",
+      "client": {
+        "en": "wpsenderx.com",
+        "ar": "wpsenderx.com"
+      },
+      "link": "https://wpsenderx.com"
+    },
+    {
+      "id": "food-good",
+      "slug": "food-good",
+      "title": {
+        "en": "Food Good — Restaurant Platform",
+        "ar": "Food Good — منصة المطاعم"
+      },
+      "category": {
+        "en": "Web Application",
+        "ar": "تطبيق ويب"
+      },
+      "description": {
+        "en": "A modern restaurant and food ordering platform built with WordPress, featuring custom performance optimization plugin and responsive design.",
+        "ar": "منصة مطاعم وطلب طعام حديثة مبنية بـ WordPress مع إضافة تحسين أداء مخصصة وتصميم متجاوب."
+      },
+      "techStack": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "Custom Plugin"
+      ],
+      "images": [
+        "/images/portfolio/foodgood-1.png"
+      ],
+      "featured": false,
+      "year": "2024",
+      "client": {
+        "en": "Food Good",
+        "ar": "Food Good"
+      }
+    }
+  ]
+}

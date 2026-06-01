@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "title": { "en": "Frontend", "ar": "الواجهة الأمامية" },
+      "skills": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"]
+    },
+    {
+      "id": "backend",
+      "title": { "en": "Backend", "ar": "الخادم" },
+      "skills": [".NET 8", "Node.js", "PHP", "Laravel", "Express.js", "C#"]
+    },
+    {
+      "id": "mobile",
+      "title": { "en": "Mobile", "ar": "الموبايل" },
+      "skills": ["Flutter", "Dart", "Android", "iOS"]
+    },
+    {
+      "id": "database",
+      "title": { "en": "Database", "ar": "قواعد البيانات" },
+      "skills": ["SQL Server", "MySQL", "MongoDB", "PostgreSQL", "Redis"]
+    },
+    {
+      "id": "api",
+      "title": { "en": "APIs & Integration", "ar": "الـ API والتكامل" },
+      "skills": ["REST API", "GraphQL", "WebSocket", "WhatsApp Business API", "Payment Gateways"]
+    },
+    {
+      "id": "devops",
+      "title": { "en": "DevOps & Cloud", "ar": "DevOps والسحابة" },
+      "skills": ["Docker", "Git", "CI/CD", "Azure", "AWS", "VPS", "Nginx"]
+    },
+    {
+      "id": "tools",
+      "title": { "en": "Tools & Platforms", "ar": "الأدوات والمنصات" },
+      "skills": ["WordPress", "WooCommerce", "Figma", "Postman", "VS Code"]
+    }
+  ]
+}

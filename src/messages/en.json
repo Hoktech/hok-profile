@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "HOK Technologies",
+    "subtitle": "Building Enterprise Solutions",
+    "cta": "Explore Our Work",
+    "scrollHint": "Scroll to discover"
+  },
+  "sections": {
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Enterprise-grade solutions tailored to your business needs"
+    },
+    "portfolio": {
+      "title": "Our Work",
+      "subtitle": "Projects that define our expertise",
+      "viewProject": "View Project",
+      "viewAll": "View All Projects"
+    },
+    "skills": {
+      "title": "Technologies",
+      "subtitle": "The tools and technologies we master"
+    },
+    "stats": {
+      "title": "In Numbers",
+      "projects": "Projects Delivered",
+      "clients": "Happy Clients",
+      "years": "Years Experience",
+      "technologies": "Technologies"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "The people behind HOK Technologies",
+      "leader": "Team Leader & Founder"
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Trusted partnerships driving success"
+    },
+    "cta": {
+      "title": "Let's Build Something Great",
+      "subtitle": "Ready to transform your business with cutting-edge technology?",
+      "button": "Get In Touch"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} HOK Technologies. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's discuss your next project",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message"
+  },
+  "about": {
+    "title": "About HOK",
+    "subtitle": "Our story, our mission, our vision",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with innovative, enterprise-grade technology solutions that drive growth, efficiency, and digital transformation."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading technology partner for enterprises seeking reliable, scalable, and cutting-edge digital solutions in the region."
+    }
+  }
+}

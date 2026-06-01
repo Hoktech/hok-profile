@@ -1,0 +1,29 @@
+{
+  "leader": {
+    "id": "mahmoud-salah",
+    "name": { "en": "Eng. Mahmoud Salah", "ar": "م. محمود صلاح" },
+    "title": { "en": "Full Stack Developer & Team Leader", "ar": "مطور متكامل وقائد الفريق" },
+    "shortTitle": { "en": "Full Stack Developer", "ar": "مطور متكامل" },
+    "company": { "en": "HOK Technologies", "ar": "هوك للتقنيات" },
+    "image": "/images/hero/mahmoud-salah.png",
+    "bio": {
+      "en": "Founder and team leader of HOK Technologies with deep expertise in building enterprise-grade systems. Specialized in full-stack development, system architecture, and leading technical teams to deliver scalable ERP, CRM, and POS solutions.",
+      "ar": "مؤسس وقائد فريق هوك للتقنيات مع خبرة عميقة في بناء الأنظمة المؤسسية. متخصص في التطوير المتكامل، هندسة النظم، وقيادة الفرق التقنية لتقديم حلول ERP و CRM و POS قابلة للتوسع."
+    },
+    "skills": [".NET", "React", "Next.js", "Flutter", "Node.js", "SQL Server", "WhatsApp API"],
+    "socials": {
+      "github": "",
+      "linkedin": "",
+      "website": "https://hokportal.com"
+    }
+  },
+  "members": [
+    {
+      "id": "team-member-1",
+      "name": { "en": "Team Member", "ar": "عضو الفريق" },
+      "title": { "en": "Developer", "ar": "مطور" },
+      "image": "",
+      "socials": {}
+    }
+  ]
+}
