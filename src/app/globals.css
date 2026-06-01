@@ -11,8 +11,8 @@
   --color-border-light: #2a2a2a;
   --color-accent: #c0c0c0;
   --color-accent-dim: #666666;
-  --font-sans: "Inter", "Cairo", system-ui, sans-serif;
-  --font-display: "Inter", "Cairo", system-ui, sans-serif;
+  --font-sans: var(--font-inter), var(--font-cairo), system-ui, sans-serif;
+  --font-display: var(--font-inter), var(--font-cairo), system-ui, sans-serif;
 }
 
 /* Base Styles */

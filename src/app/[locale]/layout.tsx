@@ -3,7 +3,23 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { Inter, Cairo } from "next/font/google";
 import "../globals.css";
+
+// 1. Optimize Google Fonts natively inside Next.js (removes external CDN stylesheet network block)
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-cairo",
+  display: "swap",
+});
 
 type Props = {
   children: React.ReactNode;
@@ -78,19 +94,7 @@ export default async function RootLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} dir={isRtl ? "rtl" : "ltr"}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang={locale} dir={isRtl ? "rtl" : "ltr"} className={`${inter.variable} ${cairo.variable}`}>
       <body className="antialiased bg-background text-foreground flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar />
