@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import siteData from "@/data/site.json";
 
 function AnimatedCounter({ target, duration = 2 }: { target: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -38,12 +39,13 @@ function AnimatedCounter({ target, duration = 2 }: { target: number; duration?: 
 
 export default function StatsSection() {
   const t = useTranslations("sections.stats");
+  const { projects, clients, yearsOfExperience, technologies } = siteData.stats;
 
   const stats = [
-    { value: 25, label: t("projects"), suffix: "+" },
-    { value: 15, label: t("clients"), suffix: "+" },
-    { value: 4, label: t("years"), suffix: "+" },
-    { value: 30, label: t("technologies"), suffix: "+" },
+    { value: projects, label: t("projects"), suffix: "+" },
+    { value: clients, label: t("clients"), suffix: "+" },
+    { value: yearsOfExperience, label: t("years"), suffix: "+" },
+    { value: technologies, label: t("technologies"), suffix: "+" },
   ];
 
   return (

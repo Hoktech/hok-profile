@@ -18,19 +18,45 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const title = isAr
+    ? "هوك للتقنيات — حلول المؤسسات والابتكار الرقمي"
+    : "HOK Technologies — Enterprise Solutions & Digital Innovation";
+  const description = isAr
+    ? "هوك للتقنيات تبني أنظمة ERP و POS و CRM وتطبيقات Flutter وخدمات WhatsApp API. بقيادة م. محمود صلاح."
+    : "HOK Technologies builds premium ERP, POS, CRM systems, Flutter mobile apps, and WhatsApp API services. Led by Eng. Mahmoud Salah.";
+
   return {
-    title: isAr
-      ? "هوك للتقنيات — حلول المؤسسات والابتكار الرقمي"
-      : "HOK Technologies — Enterprise Solutions & Digital Innovation",
-    description: isAr
-      ? "هوك للتقنيات تبني أنظمة ERP و POS و CRM وتطبيقات Flutter وخدمات WhatsApp API. بقيادة م. محمود صلاح."
-      : "HOK Technologies builds premium ERP, POS, CRM systems, Flutter mobile apps, and WhatsApp API services. Led by Eng. Mahmoud Salah.",
+    metadataBase: new URL("https://www.hokportal.com"),
+    title,
+    description,
     icons: {
       icon: [
         { url: "/favicon.svg", type: "image/svg+xml" },
       ],
       shortcut: "/favicon.svg",
       apple: "/favicon.svg",
+    },
+    openGraph: {
+      title,
+      description,
+      url: "https://www.hokportal.com",
+      siteName: "HOK Technologies",
+      images: [
+        {
+          url: "/images/hero/mahmoud-salah.png",
+          width: 1200,
+          height: 630,
+          alt: isAr ? "م. محمود صلاح — هوك للتقنيات" : "Eng. Mahmoud Salah — HOK Technologies",
+        },
+      ],
+      locale: locale === "ar" ? "ar_EG" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/hero/mahmoud-salah.png"],
     },
   };
 }
