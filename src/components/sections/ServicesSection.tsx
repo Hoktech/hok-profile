@@ -5,7 +5,9 @@ import servicesData from "@/data/services.json";
 import SectionHeading from "../ui/SectionHeading";
 import AnimatedReveal from "../ui/AnimatedReveal";
 
-const iconMap: Record<string, JSX.Element> = {
+import React from "react";
+
+const iconMap: Record<string, React.ReactNode> = {
   database: (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <ellipse cx="12" cy="5" rx="9" ry="3" />

@@ -4,6 +4,16 @@ import { Link } from "@/i18n/navigation";
 import portfolioData from "@/data/portfolio.json";
 import AnimatedReveal from "@/components/ui/AnimatedReveal";
 
+interface Project {
+  slug: string;
+  category: { en: string; ar: string };
+  title: { en: string; ar: string };
+  description: { en: string; ar: string };
+  year: string;
+  techStack: string[];
+  link?: string;
+}
+
 export function generateStaticParams() {
   return portfolioData.projects.map((project) => ({
     slug: project.slug,
@@ -17,9 +27,11 @@ export default async function ProjectPage({
 }) {
   const { slug } = await params;
   const locale = (await getLocale()) as "ar" | "en";
-  const project = portfolioData.projects.find((p) => p.slug === slug);
+  const rawProject = portfolioData.projects.find((p) => p.slug === slug);
 
-  if (!project) notFound();
+  if (!rawProject) notFound();
+
+  const project = rawProject as unknown as Project;
 
   return (
     <div className="pt-32 pb-32 px-6">
@@ -91,11 +103,11 @@ export default async function ProjectPage({
         </AnimatedReveal>
 
         {/* Link */}
-        {(project as Record<string, unknown>).link && (
+        {project.link && (
           <AnimatedReveal delay={0.5}>
             <div className="mt-12">
               <a
-                href={(project as Record<string, unknown>).link as string}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/10 text-sm tracking-wider text-muted hover:text-white hover:border-white/30 transition-all duration-500"
