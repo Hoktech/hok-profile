@@ -1,6 +1,5 @@
 "use client";
 
-import { Environment } from "@react-three/drei";
 
 export default function StudioLighting() {
   return (
@@ -28,13 +27,10 @@ export default function StudioLighting() {
       />
 
       {/* Subtle ambient */}
-      <ambientLight intensity={0.15} color="#ffffff" />
+      <ambientLight intensity={0.2} color="#ffffff" />
 
       {/* Point light for inner glow */}
-      <pointLight position={[0, 0, 0]} intensity={0.5} color="#ffffff" distance={5} />
-
-      {/* Environment for reflections */}
-      <Environment preset="night" environmentIntensity={0.3} />
+      <pointLight position={[0, 0, 0]} intensity={0.6} color="#ffffff" distance={5} />
     </>
   );
 }
