@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Inter, Cairo } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
 
 // 1. Optimize Google Fonts natively inside Next.js (removes external CDN stylesheet network block)
@@ -111,6 +112,7 @@ export default async function RootLayout({ children, params }: Props) {
             {children}
           </main>
           <Footer />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
