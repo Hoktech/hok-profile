@@ -219,12 +219,7 @@ export default function HeroContent() {
 
         {/* Center: The Leader Image Cutout */}
         <div className="relative w-full max-w-[460px] aspect-[1.1] z-20 self-end">
-          <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full h-full"
-          >
+          <div className="relative w-full h-full animate-fade-in-up">
             {/* Soft, beautiful background glow directly behind the cutout */}
             <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent rounded-full filter blur-3xl pointer-events-none opacity-40 -z-10" />
 
@@ -234,9 +229,10 @@ export default function HeroContent() {
               fill
               className="object-contain object-bottom select-none pointer-events-none drop-shadow-[0_10px_50px_rgba(255,255,255,0.08)]"
               priority
+              unoptimized
               sizes="(max-width: 1024px) 100vw, 460px"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
 
