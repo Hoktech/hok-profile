@@ -96,15 +96,6 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={isRtl ? "rtl" : "ltr"} className={`${inter.variable} ${cairo.variable}`}>
-      <head>
-        {/* Preload LCP Hero Image for absolute fastest discoverability */}
-        <link
-          rel="preload"
-          href="/images/hero/mahmoud-salah.png"
-          as="image"
-          fetchPriority="high"
-        />
-      </head>
       <body className="antialiased bg-background text-foreground flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar />

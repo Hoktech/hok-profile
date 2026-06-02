@@ -141,36 +141,21 @@ export default function HeroContent() {
       {/* 1. Header Typography */}
       <div className="w-full text-center max-w-4xl mx-auto flex-grow flex flex-col justify-center">
         {/* Category Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-3"
-        >
+        <div className="mb-3 animate-fade-in-up">
           <span className="text-[10px] md:text-xs uppercase tracking-[0.45em] text-accent font-light">
             {leader.shortTitle[locale]}
           </span>
-        </motion.div>
+        </div>
 
-        {/* Hero Title (Eng. Mahmoud Salah) */}
-        <motion.h1
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-white uppercase"
-        >
+        {/* Hero Title (Eng. Mahmoud Salah) — uses pure CSS animation to avoid LCP render delay */}
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-white uppercase animate-fade-in-up-d1">
           {leader.name[locale]}
-        </motion.h1>
+        </h1>
 
         {/* Cinematic Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-4 text-base sm:text-lg md:text-xl text-muted font-light max-w-2xl mx-auto tracking-wide leading-relaxed"
-        >
+        <p className="mt-4 text-base sm:text-lg md:text-xl text-muted font-light max-w-2xl mx-auto tracking-wide leading-relaxed animate-fade-in-up-d2">
           {t("subtitle")}
-        </motion.p>
+        </p>
       </div>
 
       {/* 2. Centered Showcase Product & Floating Tech Badge Matrix */}
@@ -229,7 +214,6 @@ export default function HeroContent() {
               fill
               className="object-contain object-bottom select-none pointer-events-none drop-shadow-[0_10px_50px_rgba(255,255,255,0.08)]"
               priority
-              unoptimized
               sizes="(max-width: 1024px) 100vw, 460px"
             />
           </div>
@@ -252,11 +236,7 @@ export default function HeroContent() {
         </div>
 
         {/* Action Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
+        <div className="animate-fade-in-up-d3">
           <a
             href="#services"
             className="inline-flex items-center gap-2.5 px-10 py-3.5 rounded-full border border-white/10 text-xs tracking-[0.2em] text-muted uppercase hover:text-white hover:border-white/30 hover:bg-white/[0.02] transition-all duration-500 group"
@@ -275,20 +255,15 @@ export default function HeroContent() {
               <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>
           </a>
-        </motion.div>
+        </div>
 
         {/* Scroll Hint */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.4 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="flex flex-col items-center gap-2 mt-2"
-        >
+        <div className="flex flex-col items-center gap-2 mt-2 animate-fade-in-up-d4">
           <span className="text-[9px] tracking-[0.3em] uppercase text-muted">
             {t("scrollHint")}
           </span>
           <div className="w-[1px] h-6 bg-gradient-to-b from-white/30 to-transparent" />
-        </motion.div>
+        </div>
       </div>
 
     </div>

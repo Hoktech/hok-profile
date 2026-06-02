@@ -3,7 +3,7 @@
 @theme {
   --color-background: #000000;
   --color-foreground: #ffffff;
-  --color-muted: #888888;
+  --color-muted: #999999;
   --color-subtle: #333333;
   --color-surface: #0a0a0a;
   --color-surface-light: #111111;
@@ -124,6 +124,26 @@ body {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up-d1 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-up-d2 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.animate-fade-in-up-d3 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.animate-fade-in-up-d4 {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1.2s forwards;
 }
 
 .animate-pulse-slow {
