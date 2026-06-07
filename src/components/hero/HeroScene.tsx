@@ -11,8 +11,15 @@ export default function HeroScene() {
     <div className="absolute inset-0 z-0">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 45 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
+        // Cap pixel ratio: 1.2 is enough for particles — reduces GPU fillrate on retina
+        dpr={[1, 1.2]}
+        gl={{
+          antialias: false,        // Particles don't need AA; saves ~15% GPU bandwidth
+          alpha: true,
+          powerPreference: "high-performance", // Request dedicated GPU on dual-GPU laptops
+          stencil: false,
+          depth: false,            // No depth testing needed for flat particle field
+        }}
         style={{ background: "transparent" }}
       >
         <Suspense fallback={null}>

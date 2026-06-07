@@ -2,39 +2,36 @@
 
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import siteData from "@/data/site.json";
 
-function AnimatedCounter({ target, duration = 2 }: { target: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
+function AnimatedCounter({ target, duration = 1.8 }: { target: number; duration?: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
+  const hasStarted = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
-    
-    let start = 0;
+    if (!isInView || hasStarted.current || !ref.current) return;
+    hasStarted.current = true;
+
+    const el = ref.current;
     const startTime = performance.now();
-    
-    const animate = (currentTime: number) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / (duration * 1000), 1);
-      
-      // Ease out cubic
+    const durationMs = duration * 1000;
+
+    const tick = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / durationMs, 1);
+      // Ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      
-      setCount(current);
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+      // Write directly to DOM — no React setState, no re-render
+      el.textContent = String(Math.round(eased * target));
+      if (progress < 1) requestAnimationFrame(tick);
     };
-    
-    requestAnimationFrame(animate);
+
+    requestAnimationFrame(tick);
   }, [isInView, target, duration]);
 
-  return <span ref={ref}>{count}</span>;
+  return <span ref={ref}>0</span>;
 }
 
 export default function StatsSection() {

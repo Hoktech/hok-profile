@@ -166,39 +166,37 @@ export default function HeroContent() {
           <motion.div
             key={idx}
             className={`absolute ${badge.style} z-30`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ 
-              opacity: [0.75, 1, 0.75],
-              scale: 1,
-              y: [0, -12, 0]
-            }}
-            transition={{
-              opacity: {
-                duration: badge.duration,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              y: {
-                duration: badge.duration,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              scale: { duration: 0.8, delay: badge.delay }
-            }}
+            // Step 1: Fade + scale in once
+            initial={{ opacity: 0, scale: 0.85, y: 0 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: badge.delay, ease: [0.22, 1, 0.36, 1] }}
+            style={{ willChange: "transform, opacity" }}
           >
-            <div 
-              className="glass-card px-4 py-2.5 rounded-2xl flex items-center gap-2.5 backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer"
-              style={{
-                backgroundColor: badge.color,
-                borderColor: badge.borderColor,
-                boxShadow: `0 0 15px ${badge.glowColor}`
+            {/* Step 2: Continuous float on an inner div — isolated from the entrance animation */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: badge.duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                repeatType: "loop",
               }}
+              style={{ willChange: "transform" }}
             >
-              {badge.logo}
-              <span className="text-[10px] md:text-xs font-medium text-white tracking-wider uppercase">
-                {badge.name}
-              </span>
-            </div>
+              <div
+                className="glass-card px-4 py-2.5 rounded-2xl flex items-center gap-2.5 cursor-pointer hover:scale-105 transition-transform duration-300"
+                style={{
+                  backgroundColor: badge.color,
+                  borderColor: badge.borderColor,
+                  boxShadow: `0 0 15px ${badge.glowColor}`,
+                }}
+              >
+                {badge.logo}
+                <span className="text-[10px] md:text-xs font-medium text-white tracking-wider uppercase">
+                  {badge.name}
+                </span>
+              </div>
+            </motion.div>
           </motion.div>
         ))}
 
