@@ -1,9 +1,89 @@
 import { useTranslations } from "next-intl";
 import TeamSection from "@/components/sections/TeamSection";
 
-export default function AboutPage() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+
+  const title = isAr
+    ? "من نحن — هوك للتقنيات | حلول برمجية للمؤسسات"
+    : "About Us — HOK Technologies | Enterprise Software Solutions";
+
+  const description = isAr
+    ? "تعرف على قصة هوك للتقنيات، رسالتنا ورؤيتنا في تمكين الشركات بحلول تقنية متقدمة ونقاط بيع وأنظمة تخطيط الموارد ERP المبتكرة."
+    : "Learn about HOK Technologies, our mission, vision, and team. We empower businesses with advanced enterprise systems, custom ERP, and POS solutions.";
+
+  const keywords = isAr
+    ? ["من نحن هوك للتقنيات", "رسالة هوك", "رؤية هوك للتقنيات", "قصتنا", "شركاء هوك للتقنيات", "هوك للتقنيات"]
+    : ["About HOK Technologies", "HOK Mission", "HOK Vision", "HOK Technologies history", "Enterprise tech partner", "HOK Technologies"];
+
+  return {
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: `https://www.hokportal.com/${locale}/about`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+
+  const schemaAboutPage = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": isAr ? "من نحن — هوك للتقنيات" : "About Us — HOK Technologies",
+    "description": isAr
+      ? "تعرف على قصة هوك للتقنيات ورسالتنا ورؤيتنا في تمكين الشركات بأحدث الحلول التقنية."
+      : "Learn about HOK Technologies, our story, mission, and vision in driving digital transformation.",
+    "url": `https://www.hokportal.com/${locale}/about`,
+    "publisher": {
+      "@type": "ProfessionalService",
+      "name": isAr ? "هوك للتقنيات" : "HOK Technologies",
+      "image": "https://www.hokportal.com/images/hero/mahmoud-salah.png",
+      "url": "https://www.hokportal.com"
+    }
+  };
+
+  const schemaBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": isAr ? "الرئيسية" : "Home",
+        "item": `https://www.hokportal.com/${locale}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isAr ? "من نحن" : "About Us",
+        "item": `https://www.hokportal.com/${locale}/about`
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaAboutPage) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }}
+      />
       <div className="pt-32" />
       <AboutContent />
       <TeamSection />
